@@ -32,5 +32,5 @@ def static_dir(path):
     return send_from_directory("uploads", path)
 
 
-app.run()
-
+if __name__ == "__main__":
+    app.run()
