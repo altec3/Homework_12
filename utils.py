@@ -1,0 +1,18 @@
+import json
+POSTS_LIST = "posts.json"
+
+
+def load_json(path: str = POSTS_LIST) -> list[dict]:
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def save_json(data: list[dict], path: str = POSTS_LIST) -> None:
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f)
+
+
+if __name__ == "__main__":
+    print(load_json())
+    # add_post_by_list("./uploads/cat.png", "Кот, который гуляет сам по себе")
+    # print(load_json())
