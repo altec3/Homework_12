@@ -16,7 +16,7 @@ def page_post_upload():
     if picture:
         filename = picture.filename
         picture.save(f"./uploads/images/{filename}")
-        post: dict = {"pic": f"./uploads/images/{filename}", "content": content}
+        post: dict = {"pic": f"/uploads/images/{filename}", "content": content}
         add_post_by_list(post)
         return render_template("post_uploaded.html", new_post=post)
     else:
