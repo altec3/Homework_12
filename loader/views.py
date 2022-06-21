@@ -33,10 +33,8 @@ def page_post_upload():
             return render_template("post_uploaded.html", new_post=post)
         else:
             logger_load.error(f"Не верный формат файла: .{extension}")
-            # raise TypeError("Для загрузки разрешены только изображения .jpeg и .png")
             return f"<h3>Тип файлов .{extension} не поддерживается</h3>"
     else:
-        # raise Exception("Не выбран файл для загрузки")
         return "<h3>Не выбран файл для загрузки.</h3>"
 
 
