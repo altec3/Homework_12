@@ -1,11 +1,7 @@
-from flask import Flask, request, render_template, send_from_directory
-# from functions import ...
+from flask import Flask
 
 from main.views import bp_main
 from loader.views import bp_loader
-
-POST_PATH = "posts.json"
-UPLOAD_FOLDER = "uploads/images"
 
 app = Flask(__name__)
 
